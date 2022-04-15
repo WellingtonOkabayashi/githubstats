@@ -1,11 +1,13 @@
 async function getContent() {
   try {
-    const response = await fetch('http://localhost:3110/')
-    // console.log(response)
+    const repos = await fetch(
+      'https://api.github.com/users/WellingtonOkabayashi/repos'
+    )
+    //console.log(repos)
 
-    const data = await response.json()
-    let users = data.data
-    //console.log(users)
+    const data = await repos.json()
+    let users = data
+    console.log(users)
 
     show(users)
     //
