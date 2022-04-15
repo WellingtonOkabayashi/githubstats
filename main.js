@@ -7,7 +7,7 @@ async function getContent() {
 
     const data = await repos.json()
     let users = data
-    console.log(users)
+    //console.log(users)
 
     show(users)
     //
